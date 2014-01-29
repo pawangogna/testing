@@ -1,0 +1,114 @@
+<head>
+  <title>RGB++</title>
+  <script>//alert("ss");alert("Applied");</script>
+</head>
+
+<body>
+</body>
+
+
+
+<template name="loggedInLayout">
+  <div class="page-container authorized">
+    <div class="navbar">
+      <div class="navbar-inner">
+        <a class="brand" href="#">RGB++</a>
+        <ul class="nav">
+          <li class="{{navClassFor 'home'}}"><a href="/">Home</a></li>
+          <li class="{{navClassFor 'secret'}}"><a href="/admin">Admin</a></li>
+          <li>{{loginButtons}}</li>
+          <li><a>{{Timer}}</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="page">
+        {{{yield}}}
+      </div>
+    </div>
+  </div>
+</template>
+
+<template name="postIndex">
+  <div class="row">
+  {{#if currentUser}}
+   
+            <div class="col-lg-8 colleft">
+              <h2><span>Question</span></h2>
+              <p>{{question}}</p>
+              <p>
+<pre class="styles">
+body #main p.navy {
+    text-decoration: none;
+    color: navy;
+    font-family: arial;
+    /* font-size: 12pt; */
+    font-size: 14px;
+    font-weight: medium;
+}</pre>
+              </p>
+            </div>
+            <div class="col-lg-1">
+              <h2></h2>
+              <p></p>
+            </div>
+            <div class="col-lg-3 colright">
+              <h2><span>Options<span></h2>
+              <p>
+                  Please select one option
+                  <div class="radio">
+                    <input id="optiona" type="radio" name="question" value="{{optiona}}">
+                    <label for="optiona">{{optiona}}</label>
+                    <br />
+                    <input id="optionb" type="radio" name="question" value="{{optionb}}">
+                    <label for="optionb">{{optionb}}</label>
+                    <br />
+                    <input id="optionc" type="radio" name="question" value="{{optionc}}">
+                    <label for="optionc">{{optionc}}</label>
+                    <br />
+                    <input id="optiond" type="radio" name="question" value="{{optiond}}">
+                    <label for="optiond">{{optiond}}</label>
+                  </div>
+              </p>
+              <p style="margin-top:-15px;">
+                  <a class="btn btn-default" href="#">Next &raquo;</a>
+                  <a class="btn btn-default" href="#" style="float:right;">Submit &raquo;</a>
+              </p>
+           </div>
+            
+          
+  {{else}}
+    <div class="error">
+      You need to login to continue.
+    </div>
+  {{/if}}
+    </div>
+          <hr>
+
+          <footer>
+            <p>&copy; RGB Consulting 2013</p>
+          </footer>
+
+</template>
+
+<template name="unauthorized">
+  <div class="alert alert-error alert-block">
+    <h2>401 - Unauthorized</h2>
+    <h4>Sorry, you're not authorized to see the secret!</h4>
+    <p>
+      Try again after opening your debug console and typing
+      Session.set("secret", true)
+    </p>
+  </div>
+</template>
+
+<template name="notFound">
+  <div class="alert alert-error alert-block">
+    <h2>404 - Not found</h2>
+    <h4>Sorry, couldn't find that page :-(</h4>
+    <p>
+      <a href="/">Take Me Home</a>
+    </p>
+  </div>
+</template>

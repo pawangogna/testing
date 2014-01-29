@@ -1,0 +1,43 @@
+{
+  "meteor": {},
+  "dependencies": {
+    "basePackages": {
+      "profile-online": {},
+      "accounts-ui-bootstrap-dropdown": {},
+      "streams": {},
+      "mini-pages": {}
+    },
+    "packages": {
+      "profile-online": {
+        "git": "https://github.com/erundook/meteor-profile-online.git",
+        "tag": "v0.1.9",
+        "commit": "a982f18f22cb2025a02a9b38815c68e23469cd4b"
+      },
+      "accounts-ui-bootstrap-dropdown": {
+        "git": "https://github.com/erobit/meteor-accounts-ui-bootstrap-dropdown.git",
+        "tag": "v0.6.5.1",
+        "commit": "c8b29d2e7f8611d6dec9d6d23c1c2b94e000b0fb"
+      },
+      "streams": {
+        "git": "https://github.com/arunoda/meteor-streams.git",
+        "tag": "v0.1.17",
+        "commit": "9fcbbc9b7bf542827babc92089c19e730892a22f"
+      },
+      "mini-pages": {
+        "git": "https://github.com/cmather/meteor-mini-pages.git",
+        "tag": "v0.3.2",
+        "commit": "4d885ffb6d0108ee2e47a13a6296c98a2f7b5059"
+      },
+      "HTML5-History-API": {
+        "git": "https://github.com/tmeasday/meteor-HTML5-History-API.git",
+        "tag": "v4.0.0",
+        "commit": "dc4965f1424cfca625ec3fbea17eace03f8e32c5"
+      },
+      "page-js-ie-support": {
+        "git": "https://github.com/tmeasday/meteor-page-js-ie-support.git",
+        "tag": "v1.3.5",
+        "commit": "b99ed8380aefd10b2afc8f18d9eed4dd0d8ea9cb"
+      }
+    }
+  }
+}
